@@ -6,7 +6,7 @@ int main()
     float KM,m,Miles;
     printf("donner la distance en Miles d=");
     scanf("%f",&Miles);
-    KM=Miles/cst;
+    KM=Miles*cst;
     m=KM*1000;
     printf("la distance en m d=%.2f",m);
 
