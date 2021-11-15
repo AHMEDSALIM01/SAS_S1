@@ -1,30 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {
-
-    float M;
-    debut:
-    printf("entrer votre moyenne generale M=");
-    scanf("%f",&M);
-    if(M < 10){
-        printf("Exclu\n");
-    }
-    else if(M >= 10 && M < 12){
-        printf("Admis, PASSABLE\n");
-    }
-    else if(M >= 12 && M < 14){
-        printf("Admis, ASSEZ-BIEN\n");
-    }
-    else if(M >= 14 && M < 16){
-        printf("Admis, BIEN\n");
+    char mot[50],rmot[50];
+    printf("entrer un mot avec :\n");
+    scanf("%s",&mot);
+    strlwr(mot);
+    strcpy(rmot,mot);
+    strrev(rmot);
+    int R=strcmp(mot,rmot);
+    if(R==0){
+        printf("le mot %s est un palindrome",mot);
     }
     else
-        {
-        printf("Admis, TRES-BIEN\n");
-
+    {
+        printf("le mot %s n'est pas un palindrome");
     }
-    goto debut;
     return 0;
 }
